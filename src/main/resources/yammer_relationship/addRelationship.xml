@@ -1,0 +1,57 @@
+<template name="addRelationship" xmlns="http://ws.apache.org/ns/synapse">
+    <!--
+ ~ Copyright (c) 2016 WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ ~
+ ~ Licensed under the Apache License, Version 2.0 (the "License");
+ ~ you may not use this file except in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~      http://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing, software
+ ~ distributed under the License is distributed on an "AS IS" BASIS,
+ ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ ~ See the License for the specific language governing permissions and
+ ~ limitations under the License.
+-->
+    <parameter name="userId" description="The ID of the user other than the logged-in user."/>
+    <parameter name="type"
+               description="The type of the relationship subordinate or superior or colleague."/>
+    <parameter name="email" description="The email of the user."/>
+
+    <sequence>
+        <property name="uri.var.userId" expression="$func:userId"/>
+        <property name="uri.var.type" expression="$func:type"/>
+        <property name="uri.var.email" expression="$func:email"/>
+        <property name="uri.var.query" value=""/>
+
+        <filter xpath="boolean(get-property('uri.var.userId'))">
+            <then>
+                <property name="uri.var.query"
+                          expression="fn:concat('&amp;user_id=',get-property('uri.var.userId'))"/>
+            </then>
+        </filter>
+
+        <call>
+            <endpoint>
+                <http method="post"
+                      uri-template="{uri.var.apiUrl}/relationships.{uri.var.responseType}"/>
+            </endpoint>
+        </call>
+
+        <!-- Remove custom Headers from the API Response -->
+        <header name="ETag" action="remove" scope="transport"/>
+        <header name="X-Runtime" action="remove" scope="transport"/>
+        <header name="X-Robots-Tag" action="remove" scope="transport"/>
+        <header name="X-XSS-Protection" action="remove" scope="transport"/>
+        <header name="X-UA-Compatible" action="remove" scope="transport"/>
+        <header name="X-Date" action="remove" scope="transport"/>
+        <header name="X-Content-Type-Options" action="remove" scope="transport"/>
+        <header name="P3P" action="remove" scope="transport"/>
+        <header name="Strict-Transport-Security" action="remove" scope="transport"/>
+        <header name="WWW-Authenticate" action="remove" scope="transport"/>
+        <header name="Cteonnt-Length" action="remove" scope="transport"/>
+        <header name="Status" action="remove" scope="transport"/>
+
+    </sequence>
+</template>
