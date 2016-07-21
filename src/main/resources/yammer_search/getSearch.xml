@@ -47,7 +47,7 @@
                 }
                 
                 if (apiParameters != "") {
-                	apiParameters = '?' + apiParameters.substring(0, apiParameters.length - 1);
+                	apiParameters = '?' + apiParameters.toString().substring(0, apiParameters.toString().lastIndexOf("&"));
                 	mc.setProperty('uri.var.apiParameters', apiParameters);
                 }
                 

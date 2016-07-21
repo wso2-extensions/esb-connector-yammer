@@ -1,7 +1,7 @@
 {
   "apiUrl": "%s(apiUrl)",
   "apiToken": "%s(apiToken)",
-  "responseType": "json"
+  "responseType": "json",
   "includeSuspended": "TRUE",
   "excludeOwnMessagesFromUnseen": "TRUE"
 }

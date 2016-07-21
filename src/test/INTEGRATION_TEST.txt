@@ -10,12 +10,12 @@ Pre-requisites:
 Tested Platform: 
 
  - Microsoft WINDOWS V-7
- - UBUNTU 13.04
- - WSO2 ESB 4.9.0
+ - UBUNTU 13.04, 14.04
+ - WSO2 ESB 4.9.0, 5.0.0-BETA
 
 Steps to follow in setting integration test.
 
- 1. Download WSO2 ESB 4.9.0 from official website.
+ 1. Download WSO2 ESB  5.0.0-BETA and add "-XX:-UseSplitVerifier" under $JVM_MEM_OPTS into {ESB_HOME}/bin/wso2server.sh".
 
  2. The ESB should be configured as below;
 	i)  Please make sure that the below mentioned Axis configurations are enabled (/repository/conf/axis2/axis2.xml).
@@ -44,7 +44,7 @@ Steps to follow in setting integration test.
         		Navigate to the above location from command prompt and execute 'keytool -importcert -file CERT_FILE_NAME -keystore client-truststore.jks -alias "yammer"' in command line to import yammer certificate in to keystore. Give "wso2carbon" as password.
         		NOTE : CERT_FILE_NAME is the file name which was extracted from yammer with  the extension, change it accordingly. Remove the copied certificate.
 
- 4. Compress modified ESB as wso2esb-4.9.0.zip and copy that zip file in to location "{Connector_Home}/repository/".
+ 4. Compress modified ESB as wso2esb- 5.0.0-BETA.zip and copy that zip file in to location "{Connector_Home}/repository/".
 
  5. Create a Office 365 E3 trial account and derive the API Key.
 	i) 		Using the URL "http://www.yammer.com" create a Yammer trial account.(This user should not be the person who owned the company)
@@ -54,7 +54,7 @@ Steps to follow in setting integration test.
  6. Update the Yammer properties file at location "{Connector_Home}/src/test/resources/artifacts/ESB/connector/config" as below.
 	
 	i)		apiUrl 						- 	Use "https://www.yammer.com".
-	ii) 	apiToken					-   Use the api token generated in step 4 - ii).
+	ii) 	apiToken					-   Use the api token generated in step 5 - ii).
 	iii)	postNewMessageBody			- 	Text message body for creating a message.
 	iv)		limit						- 	The number of results per page (Should be an integer value greter than or equal to 1).
 	v)		page						- 	The page number to request in resopnses (Should be an integer value greater than or equal to 1).
