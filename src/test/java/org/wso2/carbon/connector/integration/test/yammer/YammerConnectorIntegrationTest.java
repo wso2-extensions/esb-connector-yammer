@@ -52,7 +52,7 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     @BeforeClass(alwaysRun = true)
     public void setEnvironment() throws Exception {
     
-        init("yammer-connector-1.0.1");
+        init("yammer-connector-1.0.2-SNAPSHOT");
         
         esbRequestHeadersMap.put("Accept-Charset", "UTF-8");
         esbRequestHeadersMap.put("Content-Type", "application/json");
