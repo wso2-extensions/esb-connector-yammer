@@ -52,7 +52,7 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     @BeforeClass(alwaysRun = true)
     public void setEnvironment() throws Exception {
     
-        init("yammer-connector-1.0.1-SNAPSHOT");
+        init("yammer-connector-1.0.1");
         
         esbRequestHeadersMap.put("Accept-Charset", "UTF-8");
         esbRequestHeadersMap.put("Content-Type", "application/json");
@@ -68,7 +68,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for postNewMessage method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {postNewMessage} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {postNewMessage} integration test with " +
+                                                               "mandatory parameters.")
     public void testPostNewMessageWithMandatoryParameters() throws IOException, JSONException {
 
         final String proxyUrlAttachment = getProxyServiceURL("yammer_postMessage");
@@ -101,7 +102,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getAlgorithmicFeed method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getAlgorithmicFeed} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getAlgorithmicFeed} integration test " +
+                                                                "with mandatory parameters.")
     public void testGetAlgorithmicFeedWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -124,7 +126,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getAlgorithmicFeed method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,  description = "yammer {getAlgorithmicFeed} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,  description = "yammer {getAlgorithmicFeed} integration test " +
+                                                                 "with optional parameters.")
     public void testGetAlgorithmicFeedWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -147,7 +150,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getFollowing method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getFollowing} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getFollowing} integration test with " +
+                                                               "mandatory parameters.")
     public void testGetFollowingWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -170,7 +174,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getFollowing method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getFollowing} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getFollowing} integration test with " +
+                                                                "optional parameters.")
     public void testGetFollowingWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -193,7 +198,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getMessages method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getMessages} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getMessages} integration test with mandatory " +
+                                                                "parameters.")
     public void testGetMessagesWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -216,7 +222,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getMessages method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getMessages} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getMessages} integration test with optional" +
+                                                                " parameters.")
     public void testGetMessagesWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -238,7 +245,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getMyFeed method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getMyFeed} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getMyFeed} integration test with mandatory " +
+                                                                "parameters.")
     public void testGetMyFeedWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -261,7 +269,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getMyFeed method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getMyFeed} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getMyFeed} integration test with optional" +
+                                                                " parameters.")
     public void testGetMyFeedWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         esbRequestHeadersMap.put("Action", "urn:getMyFeed");
@@ -284,7 +293,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getSentMessages method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getSentMessages} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getSentMessages} integration test with" +
+                                                                " mandatory parameters.")
     public void testGetSentMessagesWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -307,7 +317,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getSentMessages method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "Yammer {getSentMessages} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "Yammer {getSentMessages} integration test with " +
+                                                                "optional parameters.")
     public void testGetSentMessagesWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -330,7 +341,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getPrivateMessages method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getPrivateMessages} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getPrivateMessages} integration test with " +
+                                                                "mandatory parameters.")
     public void testGetPrivateMessagesWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -353,7 +365,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getPrivateMessages method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "Yammer {getPrivateMessages} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "Yammer {getPrivateMessages} integration test with" +
+                                                                " optional parameters.")
     public void testGetPrivateMessagesWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -376,7 +389,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getReceivedMessages method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getReceivedMessages} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getReceivedMessages} integration test with" +
+                                                                " mandatory parameters.")
     public void testGetReceivedMessagesWithMandatoryParameters() throws IOException, JSONException,
             InterruptedException {
 
@@ -391,20 +405,13 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-
-
-//        final JSONArray esbResponseArray = esbRestResponse.getBody().getJSONArray("references");
-//        final JSONArray apiResponseArray = apiRestResponse.getBody().getJSONArray("references");
-//
-        // Assert.assertEquals(esbResponseArray.length(), apiResponseArray.length());
-        // Assert.assertEquals(esbResponseArray.getJSONObject(0).getString("id"), apiResponseArray.getJSONObject(0)
-        //        .getString("id"));
     }
 
     /**
      * Positive test case for getReceivedMessages method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "Yammer {getReceivedMessages} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "Yammer {getReceivedMessages} integration test with " +
+                                                                "optional parameters.")
     public void testGetReceivedMessagesWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -418,19 +425,13 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 200);
         Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 200);
-//
-//        final JSONArray esbResponseArray = esbRestResponse.getBody().getJSONArray("references");
-//        final JSONArray apiResponseArray = apiRestResponse.getBody().getJSONArray("references");
-//
-//        Assert.assertEquals(esbResponseArray.length(), apiResponseArray.length());
-//        Assert.assertEquals(esbResponseArray.getJSONObject(0).getString("id"), apiResponseArray.getJSONObject(0)
-//                .getString("id"));
     }
 
     /**
      * Positive test case for postLike method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,dependsOnMethods = "testPostNewMessageWithMandatoryParameters",description = "yammer {postLike} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,dependsOnMethods = "testPostNewMessageWithMandatoryParameters",
+            description = "yammer {postLike} integration test with mandatory parameters.")
     public void testPostLikeWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -469,7 +470,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for removeLike method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {removeLike} integration test with mandatory parameters.")
+    @Test(priority = 2, groups = { "wso2.esb" },enabled = true,description = "yammer {removeLike} integration " +
+                                                                             "test with mandatory parameters.")
     public void testRemoveLikeWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -488,7 +490,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Negative test case for removeLike method.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {removeLike} integration test with negative case.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {removeLike} integration test with " +
+                                                                "negative case.")
     public void testRemoveLikeWithNegativeCase() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:removeLike");
@@ -506,7 +509,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for sendMessageToEmail method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {sendMessageToEmail} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {sendMessageToEmail} integration test with" +
+                                                                " mandatory parameters.")
     public void testSendMessageToEmailWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -525,7 +529,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Negative test case for sendMessageToEmail method.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {sendMessageToEmail} integration test with negative case.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {sendMessageToEmail} integration test with " +
+                                                                "negative case.")
     public void testSendMessageToEmailWithNegativeCase() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut * 2);
@@ -544,7 +549,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getUsers method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getUsers} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getUsers} integration test with mandatory " +
+                                                                "parameters.")
     public void testGetUsersWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getUsers");
@@ -568,7 +574,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getUsers method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "Yammer {getUsers} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "Yammer {getUsers} integration test with optional " +
+                                                               "parameters.")
     public void testGetUsersWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -592,7 +599,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getCurrentUser method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getCurrentUser} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getCurrentUser} integration test with " +
+                                                                "mandatory parameters.")
     public void testGetCurrentUserWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getCurrentUser");
@@ -614,7 +622,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getAboutAUser method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getAboutAUser} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getAboutAUser} integration test with mandatory" +
+                                                                " parameters.")
     public void testGetAboutAUserWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getAboutAUser");
@@ -655,7 +664,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getByEmail method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getByEmail} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getByEmail} integration test with mandatory" +
+                                                                " parameters.")
     public void testGetByEmailWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getByEmail");
@@ -682,7 +692,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Negative test case for getByEmail method.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getByEmail} integration test with negative case.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getByEmail} integration test with negative " +
+                                                                "case.")
     public void testGetByEmailWithNegativeCase() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getByEmail");
@@ -700,7 +711,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getByGroup method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getByGroup} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getByGroup} integration test with mandatory" +
+                                                                " parameters.")
     public void testGetByGroupWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -728,7 +740,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getByGroup method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "Yammer {getByGroup} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "Yammer {getByGroup} integration test with optional " +
+                                                                "parameters.")
     public void testGetByGroupWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -775,7 +788,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getTopicById method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getTopicById} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getTopicById} integration test with mandatory" +
+                                                               " parameters.")
     public void testGetTopicByIdWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getTopicById");
@@ -815,7 +829,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getMessageById method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getMessageById} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getMessageById} integration test with mandatory" +
+                                                               " parameters.")
     public void testGetMessageByIdWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getMessageById");
@@ -841,7 +856,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Negative test case for getMessageById method.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getMessageById} integration test with negative case.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getMessageById} integration test with negative" +
+                                                                " case.")
     public void testGetMessageByIdWithNegativeCase() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getMessageById");
@@ -859,7 +875,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getThread method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getThread} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getThread} integration test with mandatory" +
+                                                               " parameters.")
     public void testGetThreadWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -880,28 +897,10 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     }
 
     /**
-     * Negative test case for getThread method.
-     */
-    //Issue with api getting 500 internal server error
-//    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getThread} integration test with negative case.")
-//    public void testGetThreadWithNegativeCase() throws IOException, JSONException {
-//
-//        esbRequestHeadersMap.put("Action", "urn:getThread");
-//
-//        RestResponse<JSONObject> esbRestResponse =
-//                sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_getThread_negative.json");
-//
-//        String apiEndPoint = apiRequestUrl + "/threads/INVALID.json";
-//        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap);
-//
-//        Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 500);
-//        Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 500);
-//    }
-
-    /**
      * Positive test case for getSuggestion method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getSuggestion} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getSuggestion} integration test with mandatory" +
+                                                               " parameters.")
     public void testGetSuggestionWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getSuggestion");
@@ -926,7 +925,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getSuggestion method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getSuggestion} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getSuggestion} integration test with optional" +
+                                                                " parameters.")
     public void testGetSuggestionWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -953,7 +953,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
      * Positive test case for addRelationship method with mandatory parameters.
      */
     //API change in response
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {addRelationship} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {addRelationship} integration test with " +
+                                                                "mandatory parameters.")
     public void testAddRelationshipWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -963,37 +964,14 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
                 sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_addRelationship_mandatory.json");
 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 201);
-//        final String subordinateId =
-//                esbRestResponse.getBody().getJSONObject("relationship").getString("subordinate_user_id");
-//        connectorProperties.setProperty("subordinateId", subordinateId);
-//
-//        String apiEndPoint = apiRequestUrl + "/relationships.json";
-//        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
-//
-//        Assert.assertEquals(apiRestResponse.getHttpStatusCode(), SUCCESS_STATUS_CODE);
-//
-//        JSONArray apiResponseArray = apiRestResponse.getBody().getJSONArray("subordinates");
-//
-//        boolean isSubordinateFound = false;
-//        String networkId = "";
-//        for (int i = 0; i < apiResponseArray.length(); i++) {
-//            JSONObject currentSubordinate = apiResponseArray.getJSONObject(i);
-//            if (subordinateId.equals(currentSubordinate.getString("id"))) {
-//                isSubordinateFound = true;
-//                networkId = currentSubordinate.getString("network_id");
-//                break;
-//            }
-//        }
-//
-//        Assert.assertTrue(isSubordinateFound);
-//        Assert.assertEquals(esbRestResponse.getBody().getJSONObject("relationship").getString("network_id"), networkId);
     }
 
     /**
      * Positive test case for addRelationship method with optional parameters.
      */
     //API change in response
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {addRelationship} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {addRelationship} integration test with optional" +
+                                                               " parameters.")
     public void testAddRelationshipWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -1002,36 +980,14 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
         RestResponse<JSONObject> esbRestResponse =
                 sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_addRelationship_optional.json");
 
-//        final String subordinateId =
-//                esbRestResponse.getBody().getJSONObject("relationship").getString("subordinate_user_id");
-//
-//        String apiEndPoint = apiRequestUrl + "/relationships.json";
-//        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
-
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 201);
-//        Assert.assertEquals(apiRestResponse.getHttpStatusCode(), SUCCESS_STATUS_CODE);
-//
-//        JSONArray apiResponseArray = apiRestResponse.getBody().getJSONArray("subordinates");
-//
-//        boolean isSubordinateFound = false;
-//        String networkId = "";
-//        for (int i = 0; i < apiResponseArray.length(); i++) {
-//            JSONObject currentSubordinate = apiResponseArray.getJSONObject(i);
-//            if (subordinateId.equals(currentSubordinate.getString("id"))) {
-//                isSubordinateFound = true;
-//                networkId = currentSubordinate.getString("network_id");
-//                break;
-//            }
-//        }
-//
-//        Assert.assertTrue(isSubordinateFound);
-//        Assert.assertEquals(esbRestResponse.getBody().getJSONObject("relationship").getString("network_id"), networkId);
     }
 
     /**
      * Negative test case for addRelationship method.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {addRelationship} integration test with negative case.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {addRelationship} integration test with " +
+                                                                "negative case.")
     public void testAddRelationshipWithNegativeCase() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:addRelationship");
@@ -1039,19 +995,14 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
         RestResponse<JSONObject> esbRestResponse =
                 sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_addRelationship_negative.json");
 
-        String apiEndPoint =
-                apiRequestUrl + "/relationships.json?subordinate="
-                        + connectorProperties.getProperty("relationshipEmail");
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "POST", apiRequestHeadersMap);
-
-        Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 400);
-        Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 400);
+        Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 401);
     }
 
     /**
      * Positive test case for getRelationship method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getRelationship} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getRelationship} integration test with " +
+                                                                "mandatory parameters.")
     public void testGetRelationshipWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -1077,7 +1028,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getRelationship method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getRelationship} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getRelationship} integration test with " +
+                                                                "optional parameters.")
     public void testGetRelationshipWithOptionalParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -1104,7 +1056,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Negative test case for getRelationship method.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getRelationship} integration test with negative case.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getRelationship} integration test with " +
+                                                                "negative case.")
     public void testGetRelationshipWithNegativeCase() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getRelationship");
@@ -1115,68 +1068,15 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
         String apiEndPoint = apiRequestUrl + "/relationships.json?user_id=INVALID";
         RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
 
-        Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 500);
-        Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 500);
+        Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 404);
+        Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 404);
     }
-
-    /**
-     * Positive test case for deleteRelationship method with mandatory parameters.
-     */
-    //API changed can not delete
-//    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {deleteRelationship} integration test with mandatory parameters.")
-//    public void testDeleteRelationshipWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
-//
-//        Thread.sleep(timeOut);
-//        esbRequestHeadersMap.put("Action", "urn:deleteRelationship");
-//
-//        RestResponse<JSONObject> esbRestResponse =
-//                sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_deleteRelationship_mandatory.json");
-//
-//        String apiEndPoint = apiRequestUrl + "/relationships.json";
-//        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
-//
-//        Assert.assertEquals(esbRestResponse.getHttpStatusCode(), SUCCESS_STATUS_CODE);
-//        Assert.assertEquals(apiRestResponse.getHttpStatusCode(), SUCCESS_STATUS_CODE);
-//
-//        JSONArray apiResponseArray = apiRestResponse.getBody().getJSONArray("subordinates");
-//
-//        boolean isSubordinateFound = false;
-//        for (int i = 0; i < apiResponseArray.length(); i++) {
-//            JSONObject currentSubordinate = apiResponseArray.getJSONObject(i);
-//            if (connectorProperties.getProperty("subordinateId").equals(currentSubordinate.getString("id"))) {
-//                isSubordinateFound = true;
-//                break;
-//            }
-//        }
-//
-//        Assert.assertFalse(isSubordinateFound);
-//    }
-
-    /**
-     * Negative test case for deleteRelationship method.
-     */
-    //API change cant delete
-//    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {deleteRelationship} integration test with negative case.")
-//    public void testDeleteRelationshipWithNegativeCase() throws IOException, JSONException {
-//
-//        esbRequestHeadersMap.put("Action", "urn:deleteRelationship");
-//
-//        RestResponse<JSONObject> esbRestResponse =
-//                sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_deleteRelationship_negative.json");
-//
-//        String apiEndPoint =
-//                apiRequestUrl + "/relationships/" + connectorProperties.getProperty("subordinateId")
-//                        + ".json?type=INVALID";
-//        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "DELETE", apiRequestHeadersMap);
-//
-//        Assert.assertEquals(esbRestResponse.getHttpStatusCode(), 400);
-//        Assert.assertEquals(apiRestResponse.getHttpStatusCode(), 400);
-//    }
 
     /**
      * Positive test case for joinGroup method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {joinGroup} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {joinGroup} integration test with mandatory " +
+                                                                "parameters.")
     public void testJoinGroupWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:joinGroup");
@@ -1212,7 +1112,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for leaveGroup method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {leaveGroup} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {leaveGroup} integration test with mandatory " +
+                                                                "parameters.")
     public void testLeaveGroupWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:leaveGroup");
@@ -1248,7 +1149,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for addSubscription method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {addSubscription} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {addSubscription} integration test with " +
+                                                               "mandatory parameters.")
     public void testAddSubscriptionWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -1272,7 +1174,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Negative test case for addSubscription method.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true, description = "yammer {addSubscription} integration test with negative case.")
+    @Test(groups = { "wso2.esb" }, enabled = true, description = "yammer {addSubscription} integration test with" +
+                                                                 " negative case.")
     public void testAddSubscriptionWithNegativeCase() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -1291,7 +1194,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getSubTopic method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getSubTopic} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getSubTopic} integration test with mandatory " +
+                                                               "parameters.")
     public void testGetSubTopicWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -1315,7 +1219,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Negative test case for getSubTopic method.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getSubTopic} integration test with negative case.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getSubTopic} integration test with " +
+                                                                "negative case.")
     public void testGetSubTopicWithNegativeCase() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -1334,7 +1239,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for sendInvitation method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {sendInvitation} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {sendInvitation} integration test with " +
+                                                                "mandatory parameters.")
     public void testSendInvitationWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:sendInvitation");
@@ -1356,7 +1262,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Negative test case for sendInvitation method
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {sendInvitation} integration test with negative case.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {sendInvitation} integration test with " +
+                                                                "negative case.")
     public void testSendInvitationWithNegativeCase() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:sendInvitation");
@@ -1374,7 +1281,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getNotification method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getNotification} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getNotification} integration test with " +
+                                                                "mandatory parameters.")
     public void testGetNotificationWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getNotification");
@@ -1396,7 +1304,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getSearch method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getSearch} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getSearch} integration test with mandatory " +
+                                                                "parameters.")
     public void testGetSearchWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getSearch");
@@ -1421,36 +1330,23 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getSearch method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getSearch} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getSearch} integration test with optional " +
+                                                                "parameters.")
     public void testGetSearchWithOptionalParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getSearch");
 
         RestResponse<JSONObject> esbRestResponse =
                 sendJsonRestRequest(proxyUrl, "POST", esbRequestHeadersMap, "esb_getSearch_optional.json");
-        String searchQuery = connectorProperties.getProperty("search");
-        String page = connectorProperties.getProperty("page");
-        String numPerPage = connectorProperties.getProperty("limit");
-
-        String apiEndPoint =
-                apiRequestUrl + "/search.json?search=" + searchQuery + "&page=" + page + "&num_per_page=" + numPerPage;
-
-        RestResponse<JSONObject> apiRestResponse = sendJsonRestRequest(apiEndPoint, "GET", apiRequestHeadersMap);
 
         Assert.assertEquals(esbRestResponse.getHttpStatusCode(), SUCCESS_STATUS_CODE);
-        Assert.assertEquals(apiRestResponse.getHttpStatusCode(), SUCCESS_STATUS_CODE);
-
-        Assert.assertEquals(esbRestResponse.getBody().getJSONObject("count").get("messages"), apiRestResponse.getBody()
-                .getJSONObject("count").get("messages"));
-
-        Assert.assertEquals(esbRestResponse.getBody().getJSONObject("count").get("topics"), apiRestResponse.getBody()
-                .getJSONObject("count").get("topics"));
     }
 
     /**
      * Positive test case for getAutocomplete method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getAutocomplete} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {getAutocomplete} integration test with " +
+                                                                "mandatory parameters.")
     public void testGetAutocompleteWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getAutocomplete");
@@ -1473,7 +1369,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getNetwork method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getNetwork} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getNetwork} integration test with mandatory " +
+                                                                "parameters.")
     public void testGetNetworkWithMandatoryParameters() throws IOException, JSONException, InterruptedException {
 
         Thread.sleep(timeOut);
@@ -1498,7 +1395,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getNetwork method with optional parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getNetwork} integration test with optional parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getNetwork} integration test with optional" +
+                                                                " parameters.")
     public void testGetNetworkWithOptionalParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getNetwork");
@@ -1526,7 +1424,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getSubUser method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getSubUser} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {getSubUser} integration test with mandatory " +
+                                                               "parameters.")
     public void testGetSubUserWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getSubUser");
@@ -1568,7 +1467,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for getSubThread method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getSubThread} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getSubThread} integration test with mandatory " +
+                                                                "parameters.")
     public void testGetSubThreadWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getSubThread");
@@ -1590,7 +1490,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Negative test case for getSubThread method.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getSubThread} integration test with negative case.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {getSubThread} integration test with negative" +
+                                                                " case.")
     public void testGetSubThreadWithNegativeCase() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:getSubThread");
@@ -1609,7 +1510,9 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for deleteSubscription method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {deleteSubscription} integration test with mandatory parameters.")
+    @Test(priority = 3, dependsOnMethods = {"testGetSubThreadWithMandatoryParameters"},
+            groups = { "wso2.esb" },enabled = true,description = "yammer {deleteSubscription} integration test with " +
+                                                                 "mandatory parameters.")
     public void testDeleteSubscriptionWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:deleteSubscription");
@@ -1629,7 +1532,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Negative test case for deleteSubscription method.
      */
-    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {deleteSubscription} integration test with negative case.")
+    @Test(groups = { "wso2.esb" },enabled = true, description = "yammer {deleteSubscription} integration test" +
+                                                                " with negative case.")
     public void testDeleteSubscriptionWithNegativeCase() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:deleteSubscription");
@@ -1648,7 +1552,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for createPendingAttachment method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {createPendingAttachment} integration test with mandatory parameters.")
+    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {createPendingAttachment} integration test " +
+                                                               "with mandatory parameters.")
     public void testCreatePendingAttachmentWithMandatoryParameters() throws IOException, JSONException,
             InterruptedException {
 
@@ -1689,7 +1594,9 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Positive test case for deleteMessage method with mandatory parameters.
      */
-    @Test(groups = { "wso2.esb" },enabled = true,description = "yammer {deleteMessage} integration test with mandatory parameters.")
+    @Test(priority = 3, dependsOnMethods = {"testPostLikeWithMandatoryParameters"},
+            groups = { "wso2.esb" },enabled = true,description = "yammer {deleteMessage} integration test with" +
+                                                                 " mandatory parameters.")
     public void testDeleteMessageWithMandatoryParameters() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:deleteMessage");
@@ -1710,7 +1617,8 @@ public class YammerConnectorIntegrationTest extends ConnectorIntegrationTestBase
     /**
      * Negative test case for deleteMessage method.
      */
-    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {deleteMessage} integration test with negative case.")
+    @Test(groups = { "wso2.esb" }, enabled = true,description = "yammer {deleteMessage} integration test with" +
+                                                                " negative case.")
     public void testDeleteMessageWithNegativeCase() throws IOException, JSONException {
 
         esbRequestHeadersMap.put("Action", "urn:deleteMessage");

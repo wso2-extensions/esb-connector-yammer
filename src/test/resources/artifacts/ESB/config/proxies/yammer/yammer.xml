@@ -237,8 +237,7 @@
                 <case regex="urn:getNetwork">
                     <yammer.getNetwork>
                         <includeSuspended>{$ctx:includeSuspended}</includeSuspended>
-                        <excludeOwnMessagesFromUnseen>{$ctx:excludeOwnMessagesFromUnseen}
-                        </excludeOwnMessagesFromUnseen>
+                        <excludeOwnMessagesFromUnseen>{$ctx:excludeOwnMessagesFromUnseen}</excludeOwnMessagesFromUnseen>
                     </yammer.getNetwork>
                 </case>
                 <case regex="urn:getSubUser">
