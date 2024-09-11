@@ -4,7 +4,7 @@
     "category": "Social Media",
     "documentationUrl": "https://docs.wso2.com/display/ESBCONNECTORS/Yammer+Connector",
     "description": "The Yammer connector allows you to access the Yammer REST API through the WSO2 ESB. Yammer is a leading enterprise social network for businesses to get work done smarter and faster.",
-    "status": "Active",
+    "status": "Inactive",
     "labels": [
         "connector"
     ],
